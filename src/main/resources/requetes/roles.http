@@ -1,0 +1,35 @@
+POST http://localhost:8181/api/roles
+Content-Type: application/json
+
+{
+  "libelle": "CONTRIBUABLE",
+  "description": "profil public"
+}
+
+### Insciption
+POST http://localhost:8181/api/inscription
+Content-Type: application/json
+
+{
+  "prenom": "Achille",
+  "nom": "MBOUGUENG",
+  "motDePasse": "chillo.tech",
+  "telephone": "0033761705745",
+  "email": "achille.mbougueng@chillo.tech"
+}
+### Insciption
+POST http://localhost:8181/api/activation
+Content-Type: application/json
+
+{
+  "code": "764898"
+}
+
+### Connexion
+POST http://localhost:8181/api/connexion
+Content-Type: application/json
+
+{
+  "password": "chillo.tech",
+  "username": "achille.mbougueng@chillo.tech"
+}

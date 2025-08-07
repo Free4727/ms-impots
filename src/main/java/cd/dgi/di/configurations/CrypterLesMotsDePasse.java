@@ -1,0 +1,20 @@
+package cd.dgi.di.configurations;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.client.RestClient;
+
+@Configuration
+public class CrypterLesMotsDePasse {
+
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public RestClient restClient() {
+        return RestClient.builder().build();
+    }
+}
