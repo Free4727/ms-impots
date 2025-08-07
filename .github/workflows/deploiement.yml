@@ -5,3 +5,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "deploiement projet ms-declaration-impots"
+  build-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build project
+        uses: actions/checkout@v2
+      - name: version de Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '21'
+      - name: generate jar
+        run: |
+          ls -al
+          ./mvnw clean package spring-boot:repackage -Dmaven.test.skip=true
+          ls -al target
+    
+
+
+    
+    
