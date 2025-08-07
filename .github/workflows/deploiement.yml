@@ -1,0 +1,8 @@
+on:
+  push:
+    
+jobs:
+  test:
+    run-on: ubuntu-latest
+    steps:
+      - echo "deploiement projet ms-declaration-impots"
